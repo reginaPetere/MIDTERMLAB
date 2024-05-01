@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrewsKo-pi Coffee Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family:'Dancing Script', cursive;
+      margin: 0;
+      background-color: whitesmoke;
+      color: #333;
+      background-image: url("coffeebg.jpg");
+      background-repeat: repeat;
+      background-position: center;
+      background-size: auto;
+
+    }
+    .menu-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f7d1d8;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgb(255, 30, 124);
+    }
+
+    /* Responsive logo */
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+    }
+
+    /* Responsive headings and text */
+    h1, h2, h3, h4, h5, h6, p {
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #4b2c0e;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #6d441a;
+      text-align: center;
+      color: #fb6f92; 
+      font-family:'Playfair Display', serif;
+    }
+
+
+    h3 {
+      font-size: 1.5em;
+      color: #6d441a;
+    }
+
+    p {
+      font-size: 1em;
+    }
+    .coffee-item {
+      margin-top: 20px;
+      border-bottom: 1px solid #ff8fab;
+      padding-bottom: 20px;
+    }
+
+    .coffee-item:last-child {
+      border-bottom: none;
+    }
+
+    .coffee-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .coffee-details {
+      flex-grow: 1;
+    }
+
+    .coffee-name {
+      font-weight: bold;
+      color: #6d441a;
+    }
+
+    .coffee-desc {
+      color: #242121;
+    }
+
+    @media (max-width: 768px) {
+      .menu-container {
+        width: 95%;
+      }
+
+      .coffee-item {
+        display: block;
+      }
+
+      .coffee-image {
+        margin: 0 auto 10px;
+      }
+    }
+
+    
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+        .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .logo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.links h4 {
+    color: #222;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #4c4c4c;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    padding: 10px;
+    color: #000;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="totorologo.png" alt="logo">
+
+      </div>
+      <ul class="links">
+        <h4>Main Menu</h4>
+        <li>
+          <span class="material-symbols-outlined"></span>
+          <a href="homepage.html">Home</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">👤</span>
+          <a href="profile.html">Profile</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">📅</span>
+          <a href="TABLE.html">Schedule</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">🎵</span>
+          <a href="Audio.html">Audio</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">📹</span>
+          <a href="Video.html">Video</a>
+        </li>
+      </ul>
+      <hr>
+    </nav>
+  </header>
+  <div class="menu-container">
+    <img class="logo" src="logo.png" alt="Coffee Shop Logo">  
+
+    <h1>BrewsKo-pi Menu</h1> <br>
+    <h2> Espresso-Based Coffees</h2>
+
+    <div class="coffee-item">
+      <img class="coffee-image" src="C1.png" alt="Coffee Cup">
+      <div class="coffee-details">
+        <h3>ESPRESSO</h3>
+        <p class="coffee-desc">A strong and concentrated coffee made by forcing hot water through finely-ground coffee beans</p>
+      </div>
+    </div>
+
+    <div class="coffee-item">
+     <img class="coffee-image" src="C2.png" alt="Coffee Cup">
+      <div class="coffee-details">
+        <h3>MACCHIATO</h3>
+        <p class="coffee-desc">"stained" with a small amount of steamed milk, resulting in a bold flavor with a hint of creaminess.</p>
+      </div>
+    </div>
+    
+    <div class="coffee-item">
+     <img class="coffee-image" src="C3.png" alt="Coffee Cup">
+      <div class="coffee-details">
+        <h3>CORTADO</h3>
+        <p class="coffee-desc">Equal parts espresso and steamed milk, creating a balanced and smooth drink.</p>
+      </div>
+    </div> 
+    
+    <div class="coffee-item">
+     <img class="coffee-image" src="C4.png" alt="Coffee Cup">
+      <div class="coffee-details">
+        <h3>FLAT WHITE</h3>
+        <p class="coffee-desc">A velvety espresso-based drink with steamed milk, known for its smooth texture and strong coffee flavor.</p>
+     </div>
+    </div>   
+    
+    <div class="coffee-item">
+        <img class="coffee-image" src="C5.png" alt="Coffee Cup">
+         <div class="coffee-details">
+           <h3>CAPPUCCINO</h3>
+           <p class="coffee-desc">Equal parts espresso, steamed milk, and milk foam, offering a creamy and frothy experience.</p>
+         </div>
+       </div> 
+
+    <div class="coffee-item">
+        <img class="coffee-image" src="C6.png" alt="Coffee Cup">
+         <div class="coffee-details">
+           <h3>LATTE</h3>
+           <p class="coffee-desc">Espresso with a generous amount of steamed milk and a small layer of foam, delivering a creamy and mild coffee flavor.</p>
+         </div>
+       </div> 
+        
+       <div class="coffee-item">
+         <img class="coffee-image" src="C7.png" alt="Coffee Cup">
+         <div class="coffee-details">
+         <h3>MOCHA</h3>
+         <p class="coffee-desc">Espresso combined with chocolate syrup or cocoa powder, topped with steamed milk and whipped cream, offering a rich and indulgent coffee-chocolate flavor.</p>
+         </div>
+       </div> 
+  
+
+    <div class="coffee-item">
+        <img class="coffee-image" src="C8.png" alt="Coffee Cup">
+         <div class="coffee-details">
+           <h3>AMERICANO</h3>
+           <p class="coffee-desc">Espresso diluted with hot water, creating a milder and larger beverage while preserving the intensity of espresso.</p>
+         </div>
+    </div> 
+
+    <div class="coffee-item">
+        <img class="coffee-image" src="C9.png" alt="Coffee Cup">
+         <div class="coffee-details">
+           <h3>RED EYE</h3>
+           <p class="coffee-desc">A regular brewed coffee with a shot of espresso added, providing an extra caffeine boost and a richer flavor profile.</p>
+         </div>
+       </div> 
+
+    <div class="coffee-item">
+        <img class="coffee-image" src="C9.png" alt="Coffee Cup">
+         <div class="coffee-details">
+           <h3>AFFOGATO</h3>
+           <p class="coffee-desc">A dessert consisting of a scoop of vanilla ice cream "drowned" with a shot of hot espresso.</p>
+         </div>
+       </div> 
+    
+       <h2> Brewed Coffees: </h2> <br>
+      
+
+       <div class="coffee-item">
+        <img class="coffee-image" src="C11.png" alt="Coffee Cup">
+        <div class="coffee-details">
+          <h3>DRIP COFFEE (Regular)</h3>
+          <p class="coffee-desc">Coffee brewed by passing hot water through ground coffee beans using a drip coffee maker, offering a classic and familiar coffee taste.</p>
+        </div>
+      </div>
+  
+      <div class="coffee-item">
+       <img class="coffee-image" src="C12.png" alt="Coffee Cup">
+        <div class="coffee-details">
+          <h3>DRIP COFFEE (Decaf)</h3>
+          <p class="coffee-desc">Decaffeinated coffee brewed using the same method as regular drip coffee, providing a caffeine-free option without sacrificing flavor.</p>
+        </div>
+      </div>
+      
+      <div class="coffee-item">
+       <img class="coffee-image" src="C13.png" alt="Coffee Cup">
+        <div class="coffee-details">
+          <h3>FRENCH PRESS</h3>
+          <p class="coffee-desc">uCoffee brewed by steeping coarse coffee grounds in hot water and then pressing them down with a plunger, resulting in a full-bodied and richly flavored beverage.</p>
+        </div>
+      </div> 
+      
+      <div class="coffee-item">
+       <img class="coffee-image" src="C14.png" alt="Coffee Cup">
+        <div class="coffee-details">
+          <h3>POUR-OVER</h3>
+          <p class="coffee-desc">Coffee brewed by manually pouring hot water over coffee grounds in a filter, offering a clean and nuanced flavor profile with control over brewing variables.</p>
+       </div>
+      </div>   
+      
+      <div class="coffee-item">
+          <img class="coffee-image" src="C15.png" alt="Coffee Cup">
+           <div class="coffee-details">
+             <h3>AEROPRESS</h3>
+             <p class="coffee-desc">Coffee brewed by pressing hot water through coffee grounds using air pressure, resulting in a smooth and flavorful cup with a quick brewing process.</p>
+           </div>
+         </div> 
+  
+      <div class="coffee-item">
+          <img class="coffee-image" src="C16.png" alt="Coffee Cup">
+           <div class="coffee-details">
+             <h3>CHEMEX COFFEE</h3>
+             <p class="coffee-desc">Coffee brewed using a Chemex coffee maker, which involves pouring hot water over coffee grounds in a special filter, producing a clean and crisp flavor profile.</p>
+           </div>
+         </div> 
+          
+         <div class="coffee-item">
+           <img class="coffee-image" src="C17.png" alt="Coffee Cup">
+           <div class="coffee-details">
+           <h3>SIPHON COFFEE</h3>
+           <p class="coffee-desc">Coffee brewed using a siphon coffee maker, where water is heated in a lower chamber and forced into an upper chamber with coffee grounds, offering a unique and theatrical brewing experience with a clean and aromatic taste.</p>
+           </div>
+         </div> 
+    
+  
+      <div class="coffee-item">
+          <img class="coffee-image" src="C18.png" alt="Coffee Cup">
+           <div class="coffee-details">
+             <h3>TURKISH COFFEE</h3>
+             <p class="coffee-desc">Coffee brewed by boiling finely-ground coffee beans with water and sugar in a special pot called a cezve, resulting in a strong and thick beverage with a rich foam on top.
+            </p>
+           </div>
+      </div> 
+  
+      <div class="coffee-item">
+          <img class="coffee-image" src="C19.png" alt="Coffee Cup">
+           <div class="coffee-details">
+             <h3>COLD BREW</h3>
+             <p class="coffee-desc">Coffee brewed using cold water over an extended period, typically 12-24 hours, resulting in a smooth and mellow beverage with low acidity and a subtle sweetness.</p>
+           </div>
+         </div> 
+  
+      <div class="coffee-item">
+          <img class="coffee-image" src="c20.png" alt="Coffee Cup">
+           <div class="coffee-details">
+             <h3>ICED COFFEE</h3>
+             <p class="coffee-desc">Regular brewed coffee served over ice, offering a refreshing and chilled alternative to hot coffee with the same familiar flavors.</p>
+           </div>
+         </div> 
+
+    
+  </div>
+</body>
+</html>

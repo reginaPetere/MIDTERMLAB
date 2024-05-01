@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <style>
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-left: 10%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f8b7c8;
+        }
+        body {  
+          margin: 0;
+          padding: 0;
+          background-image: url('chopperbg.png'); 
+          background-size: cover; 
+          background-position: center; 
+          font-family: Arial, sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar .logo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+.links h4 {
+    color: #222;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #4c4c4c;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    padding: 10px;
+    color: #000;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+  }
+
+    </style>
+
+    
+</head>
+<body>
+  <header>
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="totorologo.png" alt="logo">
+        <h2>SCHEDULE</h2>
+      </div>
+      <ul class="links">
+        <h4>Main Menu</h4>
+        <li>
+          <span class="material-symbols-outlined"></span>
+          <a href="homepage.html">Home</a>
+        </li>
+        <li>
+        <li>
+          <span class="material-symbols-outlined">👤</span>
+          <a href="profile.html">Profile</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">🎵</span>
+          <a href="Audio.html">Audio</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">📹</span>
+          <a href="Video.html">Video</a>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">☕</span>
+          <a href="coffeeMenu.html">Coffee Menu</a>
+        </li>
+      </ul>
+      <hr>
+    </nav>
+  </header>
+<body bgcolor="#c0c0c0">
+  <center> 
+    <h1> My Class Schedule</h1>
+    <h2> Irregular Student version </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7:00 - 7:30</td>
+      <td > </td>
+      <td style="background-color: #fb6f92;" rowspan="4">GNED 10<br> Ms. Solis <br> Audi2 </td>
+      <td></td>
+      <td></td>
+      <td style="background-color: #ff69b4;" rowspan="4">DCIT 55<br> Mr. Racadio <br> CL4</td>
+      <td style="background-color: #ffa3b3;" rowspan="4">GNED 14<br> Ms. Sambrano <br> Rm 305 </td>
+    </tr>
+    <tr>
+      <td>7:30 - 8:00</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      
+    
+      
+    </tr>
+    <tr>
+      <td>8:00 - 8:30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td>8:30 - 9:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td>9:00 - 9:30 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9:30 - 10:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10:00 - 10:30 </td>
+      <td></td>
+      <td style="background-color: rgba(255, 136, 156, 0.938);" rowspan="4"> DCIT 25 <br> Mr. Jimenez <br> CL2</td>
+      <td style="background-color: rgba(255, 136, 156, 0.938);" >DCIT 25 <br> Mr. Jimenez <br> CL3 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td>10:30 - 11:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td>11:00 - 11:30 </td>
+      <td></td>
+      <td></td>
+      <td style="background-color: #ff6980;" rowspan="4">MATH 2<br> Ms.Castillo M. <br> Rm 301</td>
+      <td></td>
+      <td></td>
+    
+    </tr>
+    <tr>
+      <td>11:30 - 12:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+        
+    </tr>
+    <tr>
+      <td>12:00 - 12:30 </td>
+      <td></td>
+      <td style="background-color: #ffa0cd;" rowspan="4">FITT 4<br> Ms. Tatad <br> GYM </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    
+    </tr>
+    <tr>
+      <td>12:30 - 1:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+        
+    </tr>
+    <tr>
+      <td>1:00 - 1:30 </td>
+      <td></td>
+      <td></td>
+      <td style="background-color: rgb(255, 121, 166);" rowspan="2">ITEC 50<br> Mr. Gole <br> Rm 303</td>
+      <td></td>
+      <td></td>
+ 
+        
+    </tr>
+    <tr>
+      <td>1:30 - 2:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  
+   
+    </tr>
+    <tr>
+      <td>2:00 - 2:30 </td>
+      <td></td>
+      <td></td>
+      <td style="background-color: #ff69b4;" rowspan="2">DCIT 55<br> Mr. Racadio <br> Rm 303</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2:30 - 3:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   
+    </tr>
+    <tr>
+      <td>3:00 - 3:30 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3:30 - 4:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4:00 - 4:30 </td>
+      <td style="background-color:rgb(255, 121, 166);" rowspan="4">ITEC 50 <br> Mr. Gole <br> CL2 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4:30 - 5:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      <td>5:00 - 5:30 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+
+    </tr>
+    <tr>
+      <td>5:30 - 6:00 </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+ 
+    </tr>
+    
+  </tbody>
+</table>
+
+</body>
+</html>
